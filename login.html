@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JobConnect | Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">JobConnect</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="signup.html">For Employers</a>
+      <a href="login.html" class="btn btn-small-outline active-btn">Login</a>
+      <a href="signup.html" class="btn btn-small">Sign Up</a>
+    </nav>
+  </header>
+
+  <main class="page-centered">
+    <div class="card form-card shadow">
+      <h1>Login</h1>
+      <p class="subtitle">Access your JobConnect account</p>
+
+      <div id="loginErrors" class="error-box" style="display:none;"></div>
+
+      <form id="loginForm" novalidate>
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="you@example.com" />
+
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter your password" />
+
+        <button type="submit" class="btn full-width">Login</button>
+      </form>
+
+      <p class="small-text">
+        Don’t have an account?
+        <a href="signup.html">Sign up</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 JobConnect. All Rights Reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

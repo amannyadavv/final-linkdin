@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JobConnect | Sign Up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">JobConnect</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="#employer-section">For Employers</a>
+      <a href="login.html" class="btn btn-small-outline">Login</a>
+      <a href="signup.html" class="btn btn-small active-btn">Sign Up</a>
+    </nav>
+  </header>
+
+  <main class="page-centered">
+    <div class="card form-card shadow">
+      <h1>Create Account</h1>
+      <p class="subtitle">
+        Sign up as a job seeker or an employer to get started.
+      </p>
+
+      <div id="signupErrors" class="error-box" style="display:none;"></div>
+
+      <form id="signupForm" novalidate>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Your full name" />
+
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" placeholder="you@example.com" />
+
+        <div class="grid-2">
+          <div>
+            <label for="signupPassword">Password</label>
+            <input
+              type="password"
+              id="signupPassword"
+              placeholder="Min. 6 characters"
+            />
+          </div>
+          <div>
+            <label for="signupConfirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="signupConfirmPassword"
+              placeholder="Re-enter password"
+            />
+          </div>
+        </div>
+
+        <fieldset class="role-select">
+          <legend>Account Type</legend>
+          <label>
+            <input type="radio" name="role" value="seeker" checked />
+            Job Seeker
+          </label>
+          <label>
+            <input type="radio" name="role" value="employer" />
+            Employer
+          </label>
+        </fieldset>
+
+        <!-- Job Seeker Section -->
+        <div id="jobSeekerSection">
+          <h2 class="subheading">Job Seeker Details</h2>
+
+          <label for="resume">Upload Resume (PDF/DOC)</label>
+          <input
+            type="file"
+            id="resume"
+            accept=".pdf,.doc,.docx"
+          />
+
+          <label for="skills">Skills (comma separated)</label>
+          <input
+            type="text"
+            id="skills"
+            placeholder="e.g. HTML, CSS, JavaScript"
+          />
+        </div>
+
+        <!-- Employer Section -->
+        <div id="employerSection" style="display:none;">
+          <h2 id="employer-section" class="subheading">Employer Profile</h2>
+
+          <label for="companyName">Company Name</label>
+          <input
+            type="text"
+            id="companyName"
+            placeholder="Your company name"
+          />
+
+          <label for="companyWebsite">Company Website</label>
+          <input
+            type="url"
+            id="companyWebsite"
+            placeholder="https://example.com"
+          />
+
+          <label for="companyDescription">Company Description</label>
+          <textarea
+            id="companyDescription"
+            rows="3"
+            placeholder="Brief about your company..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn full-width">Create Account</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 JobConnect. All Rights Reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

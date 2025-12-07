@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JobConnect | Jobs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">JobConnect</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html" class="active">Jobs</a>
+      <a href="post-job.html">Post a Job</a>
+      <a href="login.html" class="btn btn-small-outline">Login</a>
+      <a href="signup.html" class="btn btn-small">Sign Up</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Available Jobs</h1>
+    <p class="subtitle">
+      Use filters to find jobs. Jobs added from the "Post a Job" page will appear here (stored in your browser).
+    </p>
+
+    <form class="search-bar" id="jobsFilterForm" onsubmit="return false;">
+      <input type="text" id="filterTitle" placeholder="Search by title or keyword" />
+      <select id="filterLocation">
+        <option value="">All Locations</option>
+        <option value="Remote">Remote</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+      </select>
+      <select id="filterType">
+        <option value="">Job Type</option>
+        <option value="Full-time">Full-time</option>
+        <option value="Internship">Internship</option>
+        <option value="Part-time">Part-time</option>
+      </select>
+      <button type="button" class="btn" id="applyFilterBtn">Filter</button>
+    </form>
+
+    <div id="jobList" class="job-list">
+      <!-- Jobs will be injected here by JavaScript -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 JobConnect. All Rights Reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

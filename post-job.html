@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JobConnect | Post a Job</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">JobConnect</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="post-job.html" class="active">Post a Job</a>
+      <a href="login.html" class="btn btn-small-outline">Login</a>
+      <a href="signup.html" class="btn btn-small">Sign Up</a>
+    </nav>
+  </header>
+
+  <main class="page-centered">
+    <div class="card form-card shadow">
+      <h1>Post a Job</h1>
+      <p class="subtitle">
+        Employers can add new job openings. These will appear on the Jobs page (demo).
+      </p>
+
+      <div id="postJobErrors" class="error-box" style="display:none;"></div>
+
+      <form id="postJobForm" novalidate>
+        <label for="jobTitle">Job Title</label>
+        <input type="text" id="jobTitle" placeholder="e.g. Frontend Developer" />
+
+        <label for="jobCompany">Company Name</label>
+        <input type="text" id="jobCompany" placeholder="e.g. TechNova Pvt Ltd" />
+
+        <label for="jobLocation">Location</label>
+        <input type="text" id="jobLocation" placeholder="e.g. Bangalore / Remote" />
+
+        <label for="jobType">Job Type</label>
+        <select id="jobType">
+          <option value="">Select type</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Internship">Internship</option>
+        </select>
+
+        <label for="jobDescription">Job Description</label>
+        <textarea id="jobDescription" rows="4" placeholder="Describe the role, responsibilities, and required skills."></textarea>
+
+        <button type="submit" class="btn full-width">Publish Job</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 JobConnect. All Rights Reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
